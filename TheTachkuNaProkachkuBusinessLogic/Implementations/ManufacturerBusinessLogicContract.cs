@@ -1,9 +1,11 @@
-﻿using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
+﻿using Microsoft.Extensions.Logging;
+using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
 using TheTachkuNaProkachkuConctrat.DataModels;
+using TheTachkuNaProkachkuConctrat.StoragesContracts;
 
 namespace TheTachkuNaProkachkuBusinessLogic.Implementations;
 
-internal class ManufacturerBusinessLogicContract: IManufacturerBusinessLogicContract
+internal class ManufacturerBusinessLogicContract(IManufacturerStorageContract manufacturerStorageContract, ILogger logger) : IManufacturerBusinessLogicContract
 {
     public List<ManufacturerDataModel> GetAllManufacturers()
     {

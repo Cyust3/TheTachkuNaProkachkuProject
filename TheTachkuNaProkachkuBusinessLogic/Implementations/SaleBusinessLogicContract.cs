@@ -1,10 +1,12 @@
-﻿using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
+﻿using Microsoft.Extensions.Logging;
+using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
 using TheTachkuNaProkachkuConctrat.DataModels;
 using TheTachkuNaProkachkuConctrat.Enums;
+using TheTachkuNaProkachkuConctrat.StoragesContracts;
 
 namespace TheTachkuNaProkachkuBusinessLogic.Implementations;
 
-internal class SaleBusinessLogicContract : ISaleBusinessLogicContract
+internal class SaleBusinessLogicContract(ISaleStorageContract saleStorageContract, ILogger logger) : ISaleBusinessLogicContract
 {
 
     public List<SaleDataModel> GetAllSalesByPeriod(DateTime fromDate, DateTime toDate)

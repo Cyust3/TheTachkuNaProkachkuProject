@@ -1,9 +1,11 @@
-﻿using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
+﻿using Microsoft.Extensions.Logging;
+using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
 using TheTachkuNaProkachkuConctrat.DataModels;
+using TheTachkuNaProkachkuConctrat.StoragesContracts;
 
 namespace TheTachkuNaProkachkuBusinessLogic.Implementations;
 
-internal class WorkerBusinessLogicContract : IWorkerBusinessLogicContract
+internal class WorkerBusinessLogicContract(IWorkerStorageContract workerStorageContract, ILogger logger) : IWorkerBusinessLogicContract
 {
 
     public List<WorkerDataModel> GetAllWorkers(bool onlyActive = true)

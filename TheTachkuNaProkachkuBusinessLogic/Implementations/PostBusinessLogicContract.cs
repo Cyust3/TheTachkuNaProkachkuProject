@@ -1,10 +1,12 @@
-﻿using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
+﻿using Microsoft.Extensions.Logging;
+using TheTachkuNaProkachkuConctrat.BusinessLogicsContracts;
 using TheTachkuNaProkachkuConctrat.DataModels;
 using TheTachkuNaProkachkuConctrat.Enums;
+using TheTachkuNaProkachkuConctrat.StoragesContracts;
 
 namespace TheTachkuNaProkachkuBusinessLogic.Implementations;
 
-internal class PostBusinessLogicContract : IPostBusinessLogicContract
+internal class PostBusinessLogicContract(IPostStorageContract postStorageContract, ILogger logger) : IPostBusinessLogicContract
 {
 
     public List<PostDataModel> GetAllPosts(bool onlyActive = true)
