@@ -19,7 +19,7 @@ internal class PostBusinessLogicContract : IPostBusinessLogicContract
 
     public PostDataModel GetPostByData(string data)
     {
-        return new("", "", "", PostType.None, 0, true, DateTime.Now);
+        return new("", "", PostType.None, 0, true, DateTime.Now);
     }
 
     public void InsertPost(PostDataModel postDataModel)

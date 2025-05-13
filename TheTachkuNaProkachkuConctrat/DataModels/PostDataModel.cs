@@ -5,11 +5,9 @@ using TheTachkuNaProkachkuConctrat.Infrastructure;
 
 namespace TheTachkuNaProkachkuConctrat.DataModels;
 
-public class PostDataModel(string id, string postId, string postName, PostType postType, double salary, bool isActual, DateTime changeDate) : IValidation
+public class PostDataModel(string id, string postName, PostType postType, double salary, bool isActual, DateTime changeDate) : IValidation
 {
     public string Id { get; private set; } = id;
-
-    public string PostId { get; private set; } = postId;
 
     public string PostName { get; private set; } = postName;
 
@@ -28,12 +26,6 @@ public class PostDataModel(string id, string postId, string postName, PostType p
 
         if (!Id.IsGuid())
             throw new ValidationException("The value in the field Id is not a unique identifier");
-
-        if (PostId.IsEmpty())
-            throw new ValidationException("Field PostId is empty");
-
-        if (!PostId.IsGuid())
-            throw new ValidationException("The value in the field PostId is not a unique identifier");
 
         if (PostName.IsEmpty())
             throw new ValidationException("Field PostName is empty");
