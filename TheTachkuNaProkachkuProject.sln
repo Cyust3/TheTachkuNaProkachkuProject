@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTachkuNaProkachkuConctrat", "TheTachkuNaProkachkuConctrat\TheTachkuNaProkachkuConctrat.csproj", "{1168EAA7-21E5-4FBA-BC64-88FD3EEAFD68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTachkuNaProkachkuTests", "TheTachkuNaProkachkuTests\TheTachkuNaProkachkuTests.csproj", "{7FE50B4B-536C-436A-BE4F-F7B4172BBB88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1168EAA7-21E5-4FBA-BC64-88FD3EEAFD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1168EAA7-21E5-4FBA-BC64-88FD3EEAFD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1168EAA7-21E5-4FBA-BC64-88FD3EEAFD68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE50B4B-536C-436A-BE4F-F7B4172BBB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE50B4B-536C-436A-BE4F-F7B4172BBB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE50B4B-536C-436A-BE4F-F7B4172BBB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE50B4B-536C-436A-BE4F-F7B4172BBB88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
